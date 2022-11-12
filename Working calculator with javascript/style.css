@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+height:100vh;
+width:100vw;
+
+}
+.box{
+    width:25rem;
+    background-color: rgb(245, 204, 142);
+    height:40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.text{
+    font-size: larger;
+    font-weight: 900;
+}
+.func{
+    width:80%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#display{
+    text-align: right;
+    height:140px;
+    /* line-height: 70px; */
+    padding:16px 8px;
+    font-size: 30px;
+    border-radius: 20px;
+    background: gray;
+    color:white;
+    word-wrap: break-word;
+    /* width:80%; */
+    padding-top: 1rem;
+    overflow: hidden;
+    
+    /* text-overflow: clip; */
+    
+}
+.buttons{
+    /* width:80%; */
+    border-radius: 20px;
+    display:grid;
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 25px;
+    font-weight: bolder;
+    gap:10px;
+}
+
+.button{
+    border-radius: 20px;
+    background-color: #999;
+    border:0.5px solid #fff;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    
+    transition: linear 0.1s;
+    width:100%;
+
+
+}
+.buttons > div{
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: none;
+
+}
+.button:active{
+    background-color: #c5c4c4;
+}
+#equal{
+    background-color: orange;
+    color:white;
+}
+.button:hover{
+    color:white;
+}
