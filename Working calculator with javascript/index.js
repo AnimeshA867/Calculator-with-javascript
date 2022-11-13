@@ -4,27 +4,30 @@ let buttons=Array.from(document.querySelectorAll('.button'));
 
 let dis = display.innerText;
 
+let req=['0','1','2','3','4','5','6','7','8','9','(',')','/','*','-','+','Enter','Backspace','Escape','.'];
+
 document.addEventListener('keydown',(event)=>{
     let name=event.key;
-    switch(name){
-        case "Enter":
-            display.innerText=eval(display.innerText);
-            break;
-        case "Backspace":
-            display.innerText=display.innerText.slice(0,-1);
-            break;
-        case "Escape":
-            display.innerText="";
-            break;
-        default:
-            // let re=/[0-9]/;
-            if(name=="Shift"||name=="Control"||name=="Alt"||name=="Meta"||name=="CapsLock"||name=="Tab"){
+    if(req.includes(name)){
 
-            }else{
-
-                display.innerText+=name;
-            }
-    }
+        switch(name){
+            case "Enter":
+                display.innerText=eval(display.innerText);
+                break;
+                case "Backspace":
+                    display.innerText=display.innerText.slice(0,-1);
+                    break;
+                    case "Escape":
+                        display.innerText="";
+                        break;
+                        default:
+                            // let re=/[0-9]/;
+                            
+                           
+                                display.innerText+=name;
+                            
+                        }
+                    }
 })
 buttons.map(button =>{
     button.addEventListener('click',(e)=>{
